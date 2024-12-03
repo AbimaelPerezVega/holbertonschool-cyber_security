@@ -1,2 +1,3 @@
 #!/bin/bash
-ps -u "$1" -eo user,pid,vsz,rss,command | grep -v ' 0 0 '
+ps aux | grep "^$1" | awk '$5 != 0 && $6 != 0'
+
