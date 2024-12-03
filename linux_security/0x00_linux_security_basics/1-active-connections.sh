@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -tnp && echo "ok"
+sudo ss -tanp
