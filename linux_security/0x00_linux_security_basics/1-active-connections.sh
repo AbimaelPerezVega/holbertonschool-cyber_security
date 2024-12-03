@@ -1,3 +1,2 @@
 #!/bin/bash
-sudo ss -tnp
-echo "ok"
+sudo ss -tnp && echo "ok"
