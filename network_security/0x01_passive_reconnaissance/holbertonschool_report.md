@@ -1,118 +1,94 @@
-Holberton School Domain Investigation Report
+# Holberton School Domain Investigation Report
 
-Overview
+## Overview
+This report consolidates the findings from an investigation into the domain `holbertonschool.com` using data collected from the provided information. The investigation aimed to gather IP ranges, technologies, and frameworks utilized across the domain and its subdomains.
 
-This report contains the findings from an investigation of the domain holbertonschool.com using Shodan. The aim is to gather information about IP ranges, technologies, and frameworks used across all subdomains of holbertonschool.com.
+---
 
-Findings
+## IP Ranges
+The IP ranges associated with the subdomains of `holbertonschool.com` are:
 
-1. IP Ranges
+1. **192.0.78.0/24**
+   - Associated with `blog.holbertonschool.com`
+   - ASN: 2635
+   - ASN Name: AUTOMATTIC
+   - Geolocation: United States
 
-Below are the IP addresses and ranges associated with holbertonschool.com and its subdomains:
+2. **13.36.0.0/14**
+   - Associated with:
+     - `lvl2-discourse-staging.holbertonschool.com`
+     - `staging-apply-forum.holbertonschool.com`
+   - ASN: 16509
+   - ASN Name: AMAZON-02
+   - Geolocation: France
 
-Subdomain
+3. **54.86.0.0/16**
+   - Associated with `v1.holbertonschool.com`
+   - ASN: 14618
+   - ASN Name: AMAZON-AES
+   - Geolocation: United States
 
-IP Address
+4. **34.192.0.0/12**
+   - Associated with `v2.holbertonschool.com`
+   - ASN: 14618
+   - ASN Name: AMAZON-AES
+   - Geolocation: United States
 
-holbertonschool.com
+5. **52.47.0.0/16**
+   - Associated with `yriry2.holbertonschool.com`
+   - ASN: 16509
+   - ASN Name: AMAZON-02
+   - Geolocation: France
 
-99.83.190.102
+---
 
-www.holbertonschool.com
+## Technologies and Frameworks
+The following technologies and frameworks are used across the subdomains of `holbertonschool.com`:
 
-63.35.51.142
+### blog.holbertonschool.com
+- **Hosting Provider:** AUTOMATTIC
+- **Geolocation:** United States
 
-fr.holbertonschool.com
+### lvl2-discourse-staging.holbertonschool.com
+- **Hosting Provider:** AMAZON-02
+- **Geolocation:** France
 
-63.35.51.142
+### staging-apply-forum.holbertonschool.com
+- **Hosting Provider:** AMAZON-02
+- **Geolocation:** France
 
-apply.holbertonschool.com
+### v1.holbertonschool.com
+- **Web Server:** LiteSpeed
+- **Technologies:**
+  - WordPress: 6.5.3
+  - MySQL
+  - PHP
+  - LiteSpeed
+  - Bootstrap
+- **Geolocation:** United States
+- **Title:** 301 Moved Permanently / Feedbuzz
 
-13.36.10.99
+### v2.holbertonschool.com
+- **Hosting Provider:** AMAZON-AES
+- **Geolocation:** United States
 
-blog.holbertonschool.com
+### yriry2.holbertonschool.com
+- **Web Server:** Nginx
+- **Technologies:**
+  - Ruby on Rails
+  - Nginx
+  - Discourse
+- **Geolocation:** France
+- **Title:** 301 Moved Permanently
 
-192.0.78.131
+---
 
-assets.holbertonschool.com
+## Notes
+- Most subdomains leverage Amazon Web Services (AWS) for hosting, with ASN names AMAZON-02 and AMAZON-AES being common.
+- Technologies such as WordPress, Nginx, LiteSpeed, and Ruby on Rails dominate the domain's technical stack.
+- Geolocations for the IP ranges are split between the United States and France, indicating a global infrastructure.
 
-52.85.96.95
+---
 
-staging-apply.holbertonschool.com
-
-35.180.20.42
-
-support.holbertonschool.com
-
-104.16.53.111
-
-help.holbertonschool.com
-
-75.2.70.75
-
-...
-
-...
-
-2. Technologies and Frameworks Used
-
-An analysis of the technologies and frameworks used across the subdomains reveals the following:
-
-Subdomain
-
-Technologies / Frameworks
-
-holbertonschool.com
-
-AWS, Cloudflare, WordPress
-
-www.holbertonschool.com
-
-AWS, Webflow
-
-fr.holbertonschool.com
-
-AWS, Webflow
-
-apply.holbertonschool.com
-
-AWS, React, Node.js
-
-blog.holbertonschool.com
-
-WordPress, Jetpack
-
-assets.holbertonschool.com
-
-AWS S3, CloudFront
-
-staging-apply.holbertonschool.com
-
-AWS, React
-
-support.holbertonschool.com
-
-Zendesk
-
-help.holbertonschool.com
-
-AWS, Cloudflare
-
-...
-
-...
-
-Notes
-
-The investigation was conducted using Shodan, which provides detailed data about public internet-connected devices and services.
-
-IP ranges were resolved for all visible subdomains.
-
-Technologies and frameworks were identified using metadata provided by Shodan.
-
-Conclusion
-
-The domain holbertonschool.com is hosted primarily on AWS and utilizes various modern web technologies such as React, Node.js, WordPress, and Cloudflare to deliver its content and services. Subdomains show a mix of cloud-hosted and managed solutions tailored to specific purposes, such as support (Zendesk) and static assets (AWS S3).
-
-This investigation provides a foundational understanding of the infrastructure and technology stack behind holbertonschool.com and its subdomains.
-
+## Conclusion
+The domain `holbertonschool.com` demonstrates a diverse use of technologies and hosting providers, with a significant reliance on AWS. The subdomains utilize a combination of modern frameworks and technologies to support their functionality.
