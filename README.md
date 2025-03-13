@@ -46,10 +46,9 @@ Setting up secure testing environments for hands-on exercises.
 
 Staying updated with the latest security threats and mitigation techniques.
 
-Screenshot
 
 ![Cyber Security Repository](cybersec-pic.jpg)
-How to Use
+
 
 Clone the repository:
 
