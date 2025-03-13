@@ -1,55 +1,86 @@
-Cyber_Security
+# Cyber Security Repository  
 
-About the Developer
+## About the Developer  
 
-Hi, I'm Abimael! I'm passionate about cybersecurity, software development, and network security. I enjoy breaking things (ethically) to understand how they work and ensuring systems are secure from vulnerabilities. You can connect with me on:
+Hi, I'm **Abimael!** I'm passionate about:  
+- **Cybersecurity**  
+- **Software development**  
+- **Network security**  
 
-LinkedIn: https://www.linkedin.com/in/abimael-perez-vega-8870b6320/
+I enjoy ethically breaking things to understand how they work and ensuring systems are secure from vulnerabilities.  
 
-Project Overview
+📌 **Connect with me on LinkedIn:**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abimael%20Pérez--Vega-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/abimael-perez-vega-8870b6320/)  
 
-This repository serves as a comprehensive collection of cybersecurity knowledge, practical exercises, and tools to enhance security skills. It is structured into four main categories:
+---  
 
-Cyber Security Basics – Introduction to cybersecurity concepts and cryptography.
+## 📌 Project Overview  
 
-Linux Security – Security fundamentals for Linux environments, including permissions, access control, and server security.
+This repository is a **comprehensive collection** of cybersecurity knowledge, practical exercises, and tools to enhance security skills.  
 
-Network Security – Hands-on learning in reconnaissance techniques, host discovery, and traffic analysis.
+### 🔹 Categories  
 
-Web Application Security – Covers OWASP Top 10 vulnerabilities, BurpSuite fundamentals, SQL injection, and more.
+1. **Cyber Security Basics**  
+   - Introduction to cybersecurity concepts and cryptography.  
 
-Story Behind the Project
+2. **Linux Security**  
+   - Security fundamentals for Linux environments.  
+   - Covers permissions, access control, and server security.  
 
-Cybersecurity is a field that constantly evolves, and staying updated requires a mix of theory and hands-on practice. This repository is part of my projects for Holberton Coding School, where I am specializing in Cyber Security. Through these projects, I am gaining hands-on experience in ethical hacking, penetration testing, and defensive security practices.
+3. **Network Security**  
+   - Hands-on learning in:  
+     - Reconnaissance techniques  
+     - Host discovery  
+     - Traffic analysis  
 
-Implemented Features
+4. **Web Application Security**  
+   - Covers **OWASP Top 10 vulnerabilities**  
+   - **BurpSuite fundamentals**  
+   - **SQL injection** and more.  
 
-Structured learning paths for different cybersecurity domains.
+---  
 
-Hands-on exercises for network security and web application security.
+## 📖 Story Behind the Project  
 
-Essential cybersecurity tools and methodologies for ethical hacking.
+Cybersecurity is a constantly evolving field, requiring a mix of **theory** and **hands-on practice**.  
+This repository is part of my **Holberton Coding School projects**, where I specialize in **Cyber Security**.  
 
-Future Enhancements
+Through these projects, I am gaining experience in:  
+- **Ethical hacking**  
+- **Penetration testing**  
+- **Defensive security practices**  
 
-Expand content with real-world case studies and attack simulations.
+---  
 
-Add interactive labs and challenges.
+## 🚀 Implemented Features  
 
-Integrate automation scripts for security testing.
+✅ **Structured learning paths** for different cybersecurity domains.  
+✅ **Hands-on exercises** for network security and web application security.  
+✅ **Essential cybersecurity tools** and methodologies for ethical hacking.  
 
-Challenges Faced
+---  
 
-Understanding complex security protocols and ensuring practical implementation.
+## 🔮 Future Enhancements  
 
-Setting up secure testing environments for hands-on exercises.
+📌 **Expand content** with real-world case studies and attack simulations.  
+📌 **Add interactive labs** and cybersecurity challenges.  
+📌 **Integrate automation scripts** for security testing.  
 
-Staying updated with the latest security threats and mitigation techniques.
+---  
 
+## ⚠️ Challenges Faced  
+
+🔸 Understanding complex security protocols and ensuring **practical implementation**.  
+🔸 Setting up **secure testing environments** for hands-on exercises.  
+🔸 Staying updated with the **latest security threats** and mitigation techniques.  
+
+---
 
 ![Cyber Security Repository](cybersec-pic.jpg)
 
+---  
 
-Clone the repository:
+## 🔗 Clone the Repository  
 
+```sh
 git clone https://git@github.com:AbimaelPerezVega/holbertonschool-cyber_security.git
