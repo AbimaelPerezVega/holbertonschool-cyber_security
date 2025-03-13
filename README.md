@@ -48,7 +48,7 @@ Staying updated with the latest security threats and mitigation techniques.
 
 Screenshot
 
-[!Screenshot1](c:\Users\Aby\Downloads\cybersec-pic.jpg)
+[!Screenshot1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.springboard.com%2Fblog%2Fcybersecurity%2Fwhat-is-cybersecurity%2F&psig=AOvVaw3eHh6LMY0xLckV7qaieyuS&ust=1741976797286000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPj0ia_Xh4wDFQAAAAAdAAAAABAE)
 
 How to Use
 
