@@ -1,17 +1,24 @@
 #!/bin/bash
 
-# Check if the log file is passed as an argument
-if [ -z "$1" ]; then
-  echo "Usage: $0 <log_file>"
-  exit 1
+# Check if a log file is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <log_file>"
+    exit 1
 fi
 
-# Identify the IP address with the most requests (attacker)
-attacker_ip=$(awk '{print $1}' "$1" | sort | uniq -c | sort -nr | head -n 1 | awk '{print $2}')
+LOG_FILE=$1
 
-# Filter requests made by the attacker and extract the User-Agent field (usually the 12th field)
-# Then count the occurrences of each User-Agent to determine which tool/library was used
-library=$(grep "^$attacker_ip" "$1" | awk -F'"' '{print $6}' | sort | uniq -c | sort -nr | head -n 1 | awk '{print $2}')
+# Ensure the file exists
+if [ ! -f $LOG_FILE ]; then
+    echo "Error: File not found!"
+    exit 1
+fi
 
-# Output the result
-echo "$library"
+# Identify the attacker's IP
+ATTACKER_IP=$(awk '{print $1}' "$LOG_FILE" | sort | uniq -c | sort -nr | head -n 1 | awk '{print $2}')
+
+# Extract User-Agent associated with the attacker
+USER_AGENT=$(grep "^$ATTACKER_IP " "$LOG_FILE" | awk -F '"' '{print $6}' | sort | uniq -c | sort -nr | head -n 1 | awk '{$1=""; print $0}' | sed 's/^ //')
+
+# Print the most used User-Agent
+echo "$USER_AGENT"
