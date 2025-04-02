@@ -1,15 +1,10 @@
 #!/bin/bash
 
-# Check if a log file is provided
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <log_file>"
-    exit 1
-fi
-
-LOG_FILE=$1
+# Set default log file if not provided
+LOG_FILE=${1:-logs.txt}
 
 # Ensure the file exists
-if [ ! -f $LOG_FILE ]; then
+if [ ! -f "$LOG_FILE" ]; then
     echo "Error: File not found!"
     exit 1
 fi
