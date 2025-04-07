@@ -8,17 +8,22 @@ if [ ! -f "$LOG_FILE" ]; then
     exit 1
 fi
 
-# Analyze last 1000 lines for failed and accepted login attempts
-tail -n 1000 "$LOG_FILE" | \
-awk '
-/Failed password/ {
-    if ($(NF-5) == "for")
-        failed[$(NF-4)]++
+# Analyze last 1000 lines of auth.log
+tail -n 1000 "$LOG_FILE" | awk '
+/Failed password for / {
+    if ($(6) == "invalid") {
+        user=$(8)
+    } else {
+        user=$(9)
+    }
+    failed[user]++
 }
-/Accepted password/ {
-    if ($(NF-5) == "for")
-        success[$(NF-4)]++
+
+/Accepted password for / {
+    user=$(9)
+    success[user]++
 }
+
 END {
     for (user in success) {
         if (failed[user] >= 2)
