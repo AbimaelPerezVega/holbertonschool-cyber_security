@@ -2,26 +2,32 @@
 
 LOG_FILE="auth.log"
 
-# Ensure file exists
+# Check if the log file exists
 if [ ! -f "$LOG_FILE" ]; then
     echo "auth.log not found"
     exit 1
 fi
 
-# Analyze last 1000 lines of auth.log
+# Extract the last 1000 lines and analyze failed/successful logins
 tail -n 1000 "$LOG_FILE" | awk '
-/Failed password for / {
-    if ($(6) == "invalid") {
-        user=$(8)
-    } else {
-        user=$(9)
+/Failed password/ {
+    for (i = 1; i <= NF; i++) {
+        if ($i == "for") {
+            user = $(i + 1)
+            failed[user]++
+            break
+        }
     }
-    failed[user]++
 }
 
-/Accepted password for / {
-    user=$(9)
-    success[user]++
+/Accepted password/ {
+    for (i = 1; i <= NF; i++) {
+        if ($i == "for") {
+            user = $(i + 1)
+            success[user]++
+            break
+        }
+    }
 }
 
 END {
