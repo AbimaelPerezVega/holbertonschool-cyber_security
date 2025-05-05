@@ -13,4 +13,8 @@ def merge_json_files(file1_path, file2_path)
   File.open(file2_path, 'w') do |file|
     file.write(JSON.pretty_generate(merged_data))
   end
+
+  # These lines should be *after* the file is written and closed
+  puts "Merged JSON written to file.json"
+  puts "File merged successfully!"
 end
