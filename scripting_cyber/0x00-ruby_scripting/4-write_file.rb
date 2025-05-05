@@ -1,20 +1,22 @@
 #!/usr/bin/env ruby
+
 require 'json'
 
-# merge_json_files - Merges JSON objects from file1 into file2
-# @file1_path: Path to the source JSON file
-# @file2_path: Path to the destination JSON file (will be updated)
 def merge_json_files(file1_path, file2_path)
-  file1_data = JSON.parse(File.read(file1_path))
-  file2_data = JSON.parse(File.read(file2_path))
+  # Read and parse the first JSON file
+  file1_content = File.read(file1_path)
+  data1 = JSON.parse(file1_content)
 
-  merged_data = file2_data + file1_data
+  # Read and parse the second JSON file
+  file2_content = File.read(file2_path)
+  data2 = JSON.parse(file2_content)
 
-  File.open(file2_path, 'w') do |file|
-    file.write(JSON.pretty_generate(merged_data))
-  end
+  # Merge the two JSON objects (append data1 to data2)
+  merged_data = data2 + data1
 
-  # These lines should be *after* the file is written and closed
-  puts "Merged JSON written to file.json"
-  puts "File merged successfully!"
+  # Write the merged data back to file2
+  File.write(file2_path, JSON.pretty_generate(merged_data))
+
+  puts 'Merged JSON written to file.json'
+  
 end
